@@ -51,3 +51,6 @@ Updated: 2026-10-12 · Plan: `/home/crow/.hermes/plans/2026-10-12_074625-bloodbo
 - 2026-10-12 — Names: PC character = **"crow"** (in userdata0000 + backup0000 only); Will's fresh
   console character = **"ggg"**. Apollo lists three Bloodborne saves for export: CUSA00900, CUSA03173,
   CUSA00207 — the export target is **CUSA03173**. Awaiting export to identify on-disk content.
+- 2026-10-12 — **Save transfer verified**: Apollo decrypted export of the console `CUSA03173` save
+  matches the staged PC payload byte-for-byte (11/11 files, sha256). The copy worked; only a game-side
+  save-system refresh remains (fresh boot / console restart) to surface "crow" in-game.
