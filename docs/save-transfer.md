@@ -89,3 +89,11 @@ param.sfo. What works is injecting the data into the console's own save:
 4. Apollo -> HDD Saves -> the save -> "Import decrypted save files" -> import each file, then
    "Apply Changes & Resign".
 5. Exit Apollo via Circle -> boot game -> the transferred character loads.
+
+### Keystone note (corrected)
+
+- Working-save keystone on this console (fPkg install) = `d09eb8ab...` (exported from an in-game
+  save). Apollo's shipped "original" keystone (`/data/apollo/data/CUSA00207.keystone`,
+  `f6d641...`, same bytes for CUSA00900/3173) is NOT accepted by this install — staging it made
+  the copy fail again.
+- Always export the keystone from an already-working save and use those exact bytes.
