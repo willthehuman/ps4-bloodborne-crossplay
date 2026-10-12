@@ -60,3 +60,12 @@ import into the new one), or fall back to Plan B.
 - Whether the game accepts the import without a keystone fix.
 - Whether the fakeusb folder needs the `<USER-ID>_` prefix (docs are ambiguous; fallback = title-id-only name).
 - After success: back up the final save + record hashes; then the console character can co-op with the seats.
+
+## Update: corrected target — CUSA00207 (2026-10-12)
+
+- Bloodborne's param.sfo declares `INSTALL_DIR_SAVEDATA`; the canonical save id for Bloodborne is
+  **CUSA00207**, so the console stores all saves under `savedata/CUSA00207/SPRJ0005`. The game never
+  reads/writes the `CUSA03173` savedata dir (that dir was created only by the earlier Apollo copy).
+- Import payload re-staged (original param.sfo) as `/data/fakeusb/PS4/APOLLO/114633a1_CUSA00207_SPRJ0005/`
+  on the console; obsolete CUSA03173 staging removed.
+- Flow: export CUSA00207 (backup) -> Copy save game to HDD (resign) -> clean Apollo exit -> boot game.
