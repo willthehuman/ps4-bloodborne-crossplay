@@ -6,7 +6,7 @@ Updated: 2026-10-12 · Plan: `/home/crow/.hermes/plans/2026-10-12_074625-bloodbo
 |---|---|---|---|
 | 1 | Identity freeze / audit | **DONE** | `docs/audit.md`, `docs/compatibility.md`, `docs/build-manifest.json`. Gate A candidate path identified; awaits Will review + 2 open follow-ups. |
 | 2 | Console safety & recovery | **BLOCKED — needs Will + console** | Checklist in `audit.md` §4. |
-| 3 | Reproduce & fix cross-build | **IN PROGRESS** | Toolchain verified (sha256 match) + extracted; Orbis headers smoke test PASS; GoldHEN SDK built; CMake configure OK; full plugin build running (`private/logs/build-1.log`). `ld.lld` absent on host → user-local lld package + wrapper in `toolchains/bin` (no system change). |
+| 3 | Reproduce & fix cross-build | **DONE (local build)** | PRX built clean; import audit: 368 undefined → 139 `sce*` + 191 libc/cxx-rt + 38 C++ mangled, all from the 11 expected PS4 system libs; script validated; CI path bug fixed locally (not pushed). Console load test belongs to Task 5. Artifacts: `private/artifacts/`. |
 | 4 | Isolated backend & identities | pending | after Task 3 basics |
 | 5 | Plugin-load + private login milestone | pending | |
 | 6 | Online entry, auth, HTTP routing | pending | |
@@ -26,3 +26,10 @@ Updated: 2026-10-12 · Plan: `/home/crow/.hermes/plans/2026-10-12_074625-bloodbo
   (`tests/toolchain_smoke/orbis_headers.cpp`) compiles for `x86_64-pc-freebsd12-elf` with clang 22.1.8.
   GoldHEN SDK built (`libGoldHEN_Hook.a`, `crtprx.o`). Plugin CMake configure clean; full build started
   (`scripts/build-plugin.sh`; log `private/logs/build-1.log`).
+- 2026-10-12 — Task 3 build complete: full build succeeded (12:17→12:22, `-j8`; clang 22.1.8, LLD 22.1.8,
+  cmake 4.4.3). Artifact `bin/plugins/prx_final/shadNet-PS4.prx` (~3.17 MB), audit of 368 undefined
+  imports clean (all resolve to the 11 NEEDED PS4 libs; still no matching2/signaling/auth imports).
+  Re-validated end-to-end via `scripts/build-plugin.sh`. Builds are not bit-reproducible (embedded
+  timestamp) — deployed-file hash recorded at push time (`private/artifacts/PROVENANCE.md`).
+  CI failures (missing C++ headers on GitHub runners) did NOT reproduce locally; CI release path fixed
+  on local branch `local/ci-artifact-path` (not pushed).

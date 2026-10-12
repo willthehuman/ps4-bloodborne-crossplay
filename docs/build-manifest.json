@@ -63,6 +63,22 @@
       "head": "3cf7d13f5441c13939a15e7308bb191f15cc5b0f"
     }
   },
+  "artifacts": {
+    "plugin_prx": {
+      "path_local": "private/artifacts/shadNet-PS4-d9942d27.prx",
+      "sha256": "d9942d2724719046fb0a52cc043c952fc39a6b4d0e8e6195e34928f96e3c7e0b",
+      "size": 3175200,
+      "built": "2026-10-12",
+      "builder": "scripts/build-plugin.sh",
+      "note": "builds embed a timestamp; rebuild hashes vary — hash the exact deployed file at push time (earlier build sha256: 6d2a608eb16cba9b9d4f3038bd1685f9c90474bab5adaa119858f0e3c15dad77)"
+    },
+    "undefined_symbol_audit": "private/logs/prx-undefined-symbols.txt",
+    "ci_artifact_path_fix": {
+      "repo": "vendor/shadNet-PS4",
+      "branch": "local/ci-artifact-path",
+      "pushed": false
+    }
+  },
   "console_identity": {
     "status": "PENDING rediscovery (Task 2)",
     "firmware_reported_previously": "9.03",
