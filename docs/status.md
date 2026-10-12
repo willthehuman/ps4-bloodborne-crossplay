@@ -54,3 +54,7 @@ Updated: 2026-10-12 · Plan: `/home/crow/.hermes/plans/2026-10-12_074625-bloodbo
 - 2026-10-12 — **Save transfer verified**: Apollo decrypted export of the console `CUSA03173` save
   matches the staged PC payload byte-for-byte (11/11 files, sha256). The copy worked; only a game-side
   save-system refresh remains (fresh boot / console restart) to surface "crow" in-game.
+- 2026-10-12 — **Root cause found** (Apollo issue #43, maintainer): Apollo's save-mount patches stay
+  in memory unless the app exits via the circle-button "exit to XMB" flow — otherwise games see a
+  stale save view until a console restart. Fix to apply: clean Apollo exit (or restart) → boot game →
+  expect "crow".
