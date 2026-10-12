@@ -4,4 +4,5 @@ toolchains/
 __pycache__/
 *.pyc
 *.log
+!tests/fixtures/runs/*.log
 build*/

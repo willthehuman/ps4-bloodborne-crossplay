@@ -1,0 +1,16 @@
+[shadNet] <Info> (eboot.bin) client_main.cpp:57 client_start: Initializing shadNet Client
+[Lib_HookDiag] <Warning> () hook_diag.h:76 ShadNetLogHookInstall: hookdiag[net.sceNetSocket]: target=0x8002a1b40 stub=0x800915000 stubsiz=30 tramp=0x800916000 hook=0x800810350 diagbase=0x80080c120
+[Lib_HookDiag] <Warning> () hook_diag.h:83 ShadNetLogHookInstall: hookdiag[net.sceNetSocket]: stub bytes: e9 3b 02 00 00 48 8b 05 44 33 22 11 ff 25 00 00 00 00 90 90 90 90 90 90 90 90
+[Lib_HookDiag] <Warning> () hook_diag.h:91 ShadNetLogHookInstall: hookdiag[net.sceNetSocket]: target after patch: ff 25 00 00 00 00 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90
+[Lib_HookDiag] <Warning> () hook_diag.h:99 ShadNetLogHookInstall: hookdiag[net.sceNetSocket]: trampoline bytes: ff 25 00 00 00 00 90 90 90 90 90 90 90 90 90 90
+[Lib_HookDiag] <Warning> () hook_diag.h:76 ShadNetLogHookInstall: hookdiag[net.sceNetResolverStartNtoa]: target=0x8002a2400 stub=0x800915100 stubsiz=30 tramp=0x800916020 hook=0x800810420 diagbase=0x80080c120
+[Lib_HookDiag] <Warning> () hook_diag.h:83 ShadNetLogHookInstall: hookdiag[net.sceNetResolverStartNtoa]: stub bytes: 55 48 89 e5 48 83 ec 20 ff 25 00 00 00 00 90 90 90 90 90 90 90 90 90 90
+[shadNet] <Info> (eboot.bin) server_probe.cpp:191 ProbeServer: server 10.0.0.233:31313 is reachable (protocol v1)
+[shadNet] <Info> (ShadNet:Connect) client.cpp:377 DoConnect: TCP connected to 10.0.0.233:31313
+[Lib_NpSignaling] <Debug> () np_signaling_helpers.cpp:223 HandleStunEcho: STUN echo: ctxId=1 ext_addr=0x0a000032 ext_port=56009
+[Lib_Net] <Info> (NexusRevolution Socket) net.cpp:35 sceNetSocket_hook: called, name = extnetwork2_udpp2p_ipv4_3658, family = 2, type = 6 -> bridged to DGRAM, protocol = 0
+[Lib_Net] <Warning> (NexusRevolution Socket) net.cpp:66 sceNetResolverStartNtoa_hook: raw rid=0xeea13b80 hostname=0x2 addr=0x2 timeout=0x0 retry=0x0 flags=0x1cb1e8 caller=0x800824d33 code48=55488d44243850e8910900004c89ff4883c4304584f6ba020000000f45d3488d05a0d12f008b7424088b4c2404ff5008
+[Lib_Net] <Warning> (NexusRevolution Socket) net.cpp:99 sceNetResolverStartNtoa_hook: raw64 rdi=0x30d8a1b40 rsi=0x2 rdx=0x2 rcx=0x0 r8=0x0 r9=0x1cb1e8 rsp=0x30d98bd30 rbp=0x30d98bd60 rip=0x800825190 sockdepth=1
+[Lib_Net] <Warning> (NexusRevolution Socket) net.cpp:75 sceNetResolverStartNtoa_hook: raw stack: 0x2 0x2 0x800824d33 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0
+[Lib_Net] <Info> (NexusRevolution Socket) net.cpp:57 sceNetSocket_hook: depth=1 result=0x80410116 entry_ret=0x800b01234 entry_rsp=0x30d98bc00
+[Lib_UserService] <Error> (DLUserPreferenceNotifyServiceIm) user_service.cpp:87 sceUserServiceGetEvent: returned 0x80960002

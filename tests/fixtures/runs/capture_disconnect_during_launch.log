@@ -1,0 +1,8 @@
+<118>[SceLncService] launchApp(CUSA03173)
+<118>[SceLncService] category={gd} VRMode={0,0}
+<118>[SceLncService] appType={SCE_LNC_APP_TYPE_BIG_APP} [] appVer={01.09}
+[PFS] mount [0x0000588f43659e71] finished 1 1 1 1 0 1 0
+[shadNet] <Info> (eboot.bin) client_main.cpp:47 RunPluginStaticInitializers:   static init [1/15] @ 0x800997f80
+[shadNet] <Info> (eboot.bin) client_main.cpp:52 RunPluginStaticInitializers: static initializers: ran 15/15
+[shadNet] <Info> (eboot.bin) client_main.cpp:57 client_start: Initializing shadNet Client
+[Lib_NpManager] <Debug> (eboot.bin) np_callbacks.cpp:213 RegisterNpCallback: registering callback processing for npwebapi_push

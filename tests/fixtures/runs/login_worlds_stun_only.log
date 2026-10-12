@@ -1,0 +1,75 @@
+[shadNet] <Info> (eboot.bin) client_main.cpp:57 client_start: Initializing shadNet Client
+[Lib_NpManager] <Debug> (eboot.bin) np_callbacks.cpp:213 RegisterNpCallback: registering callback processing for npwebapi_push
+[Lib_NpSignaling] <Info> (eboot.bin) np_signaling.cpp:896 RegisterLibraryHooks: RegisterLibraryHooks: sceSysmoduleLoadModule -> 0x0
+[Lib_NpSignaling] <Info> (eboot.bin) np_signaling.cpp:901 RegisterLibraryHooks: import sample: CreateContext=0x800be3690 Initialize=0x800be3530 GetConnectionStatus=0x800be38b0
+[Lib_NpSignaling] <Info> (eboot.bin) np_signaling.cpp:903 RegisterLibraryHooks: own impl reference (must differ): CreateContext=0x80086c2c0
+[Lib_NpSignaling] <Info> (eboot.bin) np_signaling.cpp:932 RegisterLibraryHooks: hooked sceNpSignalingActivateConnection @ 0x800be37a0
+[Lib_NpSignaling] <Info> (eboot.bin) np_signaling.cpp:933 RegisterLibraryHooks: hooked sceNpSignalingActivateConnectionA @ 0x800be3830
+[Lib_NpSignaling] <Info> (eboot.bin) np_signaling.cpp:934 RegisterLibraryHooks: hooked sceNpSignalingCancelPeerNetInfo @ 0x800be3b50
+[Lib_NpSignaling] <Info> (eboot.bin) np_signaling.cpp:935 RegisterLibraryHooks: hooked sceNpSignalingCreateContext @ 0x800be3690
+[Lib_NpSignaling] <Info> (eboot.bin) np_signaling.cpp:936 RegisterLibraryHooks: hooked sceNpSignalingCreateContextA @ 0x800be3730
+[Lib_NpSignaling] <Info> (eboot.bin) np_signaling.cpp:937 RegisterLibraryHooks: hooked sceNpSignalingDeactivateConnection @ 0x800be3870
+[Lib_NpSignaling] <Info> (eboot.bin) np_signaling.cpp:938 RegisterLibraryHooks: hooked sceNpSignalingDeleteContext @ 0x800be3780
+[Lib_NpSignaling] <Info> (eboot.bin) np_signaling.cpp:939 RegisterLibraryHooks: hooked sceNpSignalingGetConnectionFromNpId @ 0x800be3930
+[Lib_NpSignaling] <Info> (eboot.bin) np_signaling.cpp:940 RegisterLibraryHooks: hooked sceNpSignalingGetConnectionFromPeerAddress @ 0x800be39f0
+[Lib_NpSignaling] <Info> (eboot.bin) np_signaling.cpp:941 RegisterLibraryHooks: hooked sceNpSignalingGetConnectionFromPeerAddressA @ 0x800be39c0
+[Lib_NpSignaling] <Info> (eboot.bin) np_signaling.cpp:942 RegisterLibraryHooks: hooked sceNpSignalingGetConnectionInfo @ 0x800be38d0
+[Lib_NpSignaling] <Info> (eboot.bin) np_signaling.cpp:943 RegisterLibraryHooks: hooked sceNpSignalingGetConnectionInfoA @ 0x800be3900
+[Lib_NpSignaling] <Info> (eboot.bin) np_signaling.cpp:944 RegisterLibraryHooks: hooked sceNpSignalingGetConnectionStatistics @ 0x800be3bb0
+[Lib_NpSignaling] <Info> (eboot.bin) np_signaling.cpp:945 RegisterLibraryHooks: hooked sceNpSignalingGetConnectionStatus @ 0x800be38b0
+[Lib_NpSignaling] <Info> (eboot.bin) np_signaling.cpp:946 RegisterLibraryHooks: hooked sceNpSignalingGetContextOption @ 0x800be3a40
+[Lib_NpSignaling] <Info> (eboot.bin) np_signaling.cpp:947 RegisterLibraryHooks: hooked sceNpSignalingGetLocalNetInfo @ 0x800be3a60
+[Lib_NpSignaling] <Info> (eboot.bin) np_signaling.cpp:948 RegisterLibraryHooks: hooked sceNpSignalingGetMemoryInfo @ 0x800be3b90
+[Lib_NpSignaling] <Info> (eboot.bin) np_signaling.cpp:949 RegisterLibraryHooks: hooked sceNpSignalingGetPeerNetInfo @ 0x800be3a90
+[Lib_NpSignaling] <Info> (eboot.bin) np_signaling.cpp:950 RegisterLibraryHooks: hooked sceNpSignalingGetPeerNetInfoA @ 0x800be3b20
+[Lib_NpSignaling] <Info> (eboot.bin) np_signaling.cpp:951 RegisterLibraryHooks: hooked sceNpSignalingGetPeerNetInfoResult @ 0x800be3b70
+[Lib_NpSignaling] <Info> (eboot.bin) np_signaling.cpp:952 RegisterLibraryHooks: hooked sceNpSignalingInitialize @ 0x800be3530
+[Lib_NpSignaling] <Info> (eboot.bin) np_signaling.cpp:953 RegisterLibraryHooks: hooked sceNpSignalingSetContextOption @ 0x800be3a20
+[Lib_NpSignaling] <Info> (eboot.bin) np_signaling.cpp:954 RegisterLibraryHooks: hooked sceNpSignalingTerminate @ 0x800be3660
+[Lib_NpSignaling] <Info> (eboot.bin) np_signaling.cpp:955 RegisterLibraryHooks: hooked sceNpSignalingTerminateConnection @ 0x800be3890
+[Lib_NpSignaling] <Info> (eboot.bin) np_signaling.cpp:964 RegisterLibraryHooks: self-check: import=0x800be3690 own=0x80086c2c0 -> OK
+[shadNet] <Info> (eboot.bin) client_main.cpp:98 client_start: Currently running CUSA03173
+[Lib_Net] <Info> (eboot.bin) netctl_hooks.cpp:70 sceNetCtlGetInfo_hook: netctl: sceNetCtlGetInfo code=4
+[Lib_Kernel] <Info> (eboot.bin) kernel.cpp:171 __sys_socketex_hook: socketex(name=shadNet Resolver, family=2, type=12) -> 13
+[Lib_Net] <Info> (eboot.bin) net.cpp:104 sceNetResolverStartNtoa_hook: called, hostname = 10.0.0.233, timeout = 0, retry = 0
+[Lib_Kernel] <Info> (eboot.bin) kernel.cpp:48 socket_hook: socket(family=2, type=1, protocol=6) -> 13 [errno=35]
+[Lib_Kernel] <Info> (eboot.bin) kernel.cpp:104 setsockopt_hook: setsockopt(fd=13, level=65535, opt=0x1200, len=4) -> 0 (raw=0, errno=35)
+[Lib_Kernel] <Info> (eboot.bin) kernel.cpp:66 connect_hook: connect(fd=13, addr=10.0.0.233:31313) -> -1 [errno=36]
+[Lib_Kernel] <Info> (eboot.bin) kernel.cpp:114 getsockopt_hook: getsockopt(fd=13, level=65535, opt=0x1007) -> 0 (raw=0, errno=36)
+[Lib_Kernel] <Info> (eboot.bin) kernel.cpp:104 setsockopt_hook: setsockopt(fd=13, level=65535, opt=0x1200, len=4) -> 0 (raw=0, errno=36)
+[Lib_Kernel] <Info> (eboot.bin) kernel.cpp:104 setsockopt_hook: setsockopt(fd=13, level=65535, opt=0x1006, len=16) -> 0 (raw=0, errno=36)
+[shadNet] <Info> (eboot.bin) server_probe.cpp:191 ProbeServer: server 10.0.0.233:31313 is reachable (protocol v1)
+[NpHandler] <Info> (eboot.bin) np_handler.cpp:47 Initialize: shadNet server is accessible
+[NpHandler] <Info> (eboot.bin) np_handler.cpp:106 ConnectUser: Connecting npid='testnpid' to 10.0.0.233:31313 (timeout 10s)
+[Lib_Kernel] <Info> (ShadNet:Connect) kernel.cpp:171 __sys_socketex_hook: socketex(name=shadNet Resolver, family=2, type=12) -> 13
+[Lib_Net] <Info> (ShadNet:Connect) net.cpp:104 sceNetResolverStartNtoa_hook: called, hostname = 10.0.0.233, timeout = 0, retry = 0
+[Lib_Kernel] <Info> (ShadNet:Connect) kernel.cpp:48 socket_hook: socket(family=2, type=1, protocol=6) -> 13 [errno=0]
+[Lib_Kernel] <Info> (ShadNet:Connect) kernel.cpp:104 setsockopt_hook: setsockopt(fd=13, level=65535, opt=0x1200, len=4) -> 0 (raw=0, errno=0)
+[Lib_Kernel] <Info> (ShadNet:Connect) kernel.cpp:66 connect_hook: connect(fd=13, addr=10.0.0.233:31313) -> -1 [errno=36]
+[Lib_Kernel] <Info> (ShadNet:Connect) kernel.cpp:114 getsockopt_hook: getsockopt(fd=13, level=65535, opt=0x1007) -> 0 (raw=0, errno=36)
+[Lib_Kernel] <Info> (ShadNet:Connect) kernel.cpp:104 setsockopt_hook: setsockopt(fd=13, level=65535, opt=0x1200, len=4) -> 0 (raw=0, errno=36)
+[Lib_Kernel] <Info> (ShadNet:Connect) kernel.cpp:124 getsockname_hook: getsockname(fd=13) -> 0 [errno=36]
+[Lib_Kernel] <Info> (ShadNet:Connect) kernel.cpp:132 getpeername_hook: getpeername(fd=13) -> 0 [errno=36]
+[shadNet] <Info> (ShadNet:Connect) client.cpp:377 DoConnect: TCP connected to 10.0.0.233:31313
+[Lib_Kernel] <Info> (ShadNet:Connect) kernel.cpp:104 setsockopt_hook: setsockopt(fd=13, level=65535, opt=0x1006, len=16) -> 0 (raw=0, errno=36)
+[shadNet] <Info> (ShadNet:Connect) client.cpp:420 DoConnect: ServerInfo OK (protocol v1)
+[Lib_Kernel] <Info> (ShadNet:Connect) kernel.cpp:104 setsockopt_hook: setsockopt(fd=13, level=65535, opt=0x1006, len=16) -> 0 (raw=0, errno=36)
+[shadNet] <Info> (ShadNet:Connect) client.cpp:207 ConnectThread: Login packet sent for testnpid
+[shadNet] <Info> (ShadNet:Reader) client.cpp:643 HandleLoginReply: testnpid logged in, userId=17 friends=0
+[NpHandler] <Info> (ShadNet:Reader) np_handler.cpp:412 OnLoginResult: 0 friends, 0 requests received, 0 requests sent, 0 blocked
+[shadNet] <Info> (ShadNet:Reader) client.cpp:713 HandleGetTokenReply: Bearer token captured (16 chars) for accountID 17 canonical npid 'testnpid'
+[shadNet] <Info> (ShadNet:Reader) client.cpp:741 HandleServerFeaturesReply: Server features: matching2_enabled true
+[NpHandler] <Info> (eboot.bin) np_handler.cpp:174 ConnectUser: testnpid successfully signed in to shadNet, accountId=17
+[NpHandler] <Warning> (ShadNet:Reader) np_handler.cpp:478 OnAsyncReply: unhandled async reply cmd=13 pkt_id=4 user=100000001
+[Lib_NpMatching2] <Info> (eboot.bin) np_matching2_mm.cpp:663 SetMmShadNetClient: ShadNet features: matching2_enabled=true server=0xe932a8c0 udp=21114
+[Lib_UserService] <Info> (eboot.bin) user_service.cpp:39 sceUserServiceInitialize: called
+[Lib_NpManager] <Error> (eboot.bin) np_manager.cpp:747 sceNpSetContentRestriction: (STUBBED) called
+[Lib_NpSignaling] <Debug> () np_signaling_helpers.cpp:223 HandleStunEcho: STUN echo: ctxId=1 ext_addr=0x5a32a8c0 ext_port=56009
+[Lib_Kernel] <Info> () kernel.cpp:154 recvfrom_hook: recvfrom(fd=25, len=256) -> 10
+[Lib_NpSignaling] <Debug> () np_signaling_helpers.cpp:223 HandleStunEcho: STUN echo: ctxId=1 ext_addr=0x5a32a8c0 ext_port=56009
+[Lib_NpMatching2] <Info> (NexusRevolution Main) np_matching2.cpp:451 sceNpMatching2GetWorldInfoList: called, ctxId = 1, requestOpt = 0x7ee9ff310
+[Lib_NpMatching2] <Info> (NexusRevolution Main) np_matching2_mm.cpp:802 MmSubmitRequest: MmSubmitRequest: ctx=1 reqId=1 event=0x2 cmd=111 aVariant=false callback=0x10bd4a0 arg=0x30d9d1730
+[Lib_UserService] <Error> (DLUserPreferenceNotifyServiceIm) user_service.cpp:87 sceUserServiceGetEvent: returned 0x80960002
+[Lib_NpMatching2] <Debug> (NexusRevolution Main) np_matching2_mm.cpp:811 MmSubmitRequest: submit cmd=111 pkt_id=6 ctx=1 reqId=1
+[Lib_NpMatching2] <Debug> (ShadNet:Reader) np_matching2_mm.cpp:639 OnMatchingReply: reply pkt_id=6 cmd=111 -> ctx=1 reqId=1 event=0x2
+[Lib_NpMatching2] <Debug> (Matching2:Dispatch) np_matching2_internal.cpp:1326 FireEvent: callback REQUEST ctx=1 reqId=1 event=0x2 err=0x0 data=0x880003980
