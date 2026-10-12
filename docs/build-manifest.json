@@ -1,7 +1,7 @@
 {
   "manifest_version": 1,
   "generated": "2026-10-12",
-  "generated_by": "Hermes — Task 1 (identity freeze)",
+  "generated_by": "Hermes \u2014 Task 1 (identity freeze)",
   "pins": {
     "plugin": {
       "repo": "https://github.com/StevenMiller123/shadNet-PS4",
@@ -70,13 +70,20 @@
       "size": 3175200,
       "built": "2026-10-12",
       "builder": "scripts/build-plugin.sh",
-      "note": "builds embed a timestamp; rebuild hashes vary — hash the exact deployed file at push time (earlier build sha256: 6d2a608eb16cba9b9d4f3038bd1685f9c90474bab5adaa119858f0e3c15dad77)"
+      "note": "builds embed a timestamp; rebuild hashes vary \u2014 hash the exact deployed file at push time (earlier build sha256: 6d2a608eb16cba9b9d4f3038bd1685f9c90474bab5adaa119858f0e3c15dad77)"
     },
     "undefined_symbol_audit": "private/logs/prx-undefined-symbols.txt",
     "ci_artifact_path_fix": {
       "repo": "vendor/shadNet-PS4",
       "branch": "local/ci-artifact-path",
       "pushed": false
+    },
+    "shadNet-PS4.prx": {
+      "path": "private/artifacts/shadNet-PS4-6d4afe4d.prx",
+      "sha256": "6d4afe4d42cfe37502f42592a7cc079b78614c3c4eac26c265c778ed84d3f510",
+      "size": 3175312,
+      "built": "2026-10-12",
+      "source_branch": "local/hardening"
     }
   },
   "console_identity": {
@@ -85,7 +92,7 @@
     "ftp": ":2121 (anonymous)",
     "firmware_reported_previously": "9.03 (not re-verified)",
     "goldhen_version": "unknown (menu readout pending)",
-    "local_orbis_user_id": "114633a1 (Will's profile) — plugin config key = its decimal form",
+    "local_orbis_user_id": "114633a1 (Will's profile) \u2014 plugin config key = its decimal form",
     "installed_title": "CUSA03173 Bloodborne GOTY EU + Patch v1.09 (patch.json + changeinfo verified)",
     "homebrew": "Apollo Save Tool v2.3.2; plugin loader currently OFF"
   },
