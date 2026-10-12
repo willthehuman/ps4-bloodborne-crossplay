@@ -69,3 +69,10 @@ import into the new one), or fall back to Plan B.
 - Import payload re-staged (original param.sfo) as `/data/fakeusb/PS4/APOLLO/114633a1_CUSA00207_SPRJ0005/`
   on the console; obsolete CUSA03173 staging removed.
 - Flow: export CUSA00207 (backup) -> Copy save game to HDD (resign) -> clean Apollo exit -> boot game.
+
+### Verified (2026-10-12)
+
+- Console CUSA00207 export (fetched, 11 userdata files): contains "ggg" only (UTF-16LE @0x842c in
+  userdata0000); PC payload has "crow" @0xa060, same layout. Backup:
+  `private/backups/2026-10-12-ps4/export-CUSA00207/` (+sha256sums.txt, NOTE.md) — on-disk, gitignored.
+
