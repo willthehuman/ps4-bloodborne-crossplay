@@ -7,7 +7,7 @@ Updated: 2026-10-12 · Plan: `/home/crow/.hermes/plans/2026-10-12_074625-bloodbo
 | 1 | Identity freeze / audit | **DONE** | `docs/audit.md`, `docs/compatibility.md`, `docs/build-manifest.json`. Gate A candidate path identified; awaits Will review + 2 open follow-ups. |
 | 2 | Console safety & recovery | **IN PROGRESS** | Console `192.168.50.90` reachable; identity captured (CUSA03173 v1.09 ✓; Will's profile = `114633a1`); backups taken. Apollo v2.3.2 installed. Save transfer (PC→PS4) researched + payload staged (`docs/save-transfer.md`). Remaining: game-launch baseline + Apollo import (with Will), egress session. |
 | 3 | Reproduce & fix cross-build | **DONE (local build)** | PRX built clean; import audit: 368 undefined → 139 `sce*` + 191 libc/cxx-rt + 38 C++ mangled, all from the 11 expected PS4 system libs; script validated; CI path bug fixed locally (not pushed). Console load test belongs to Task 5. Artifacts: `private/artifacts/`. |
-| 4 | Isolated backend & identities | pending | after Task 3 basics |
+| 4 | Isolated backend & identities | **DONE (dev instance)** | Container test server: `192.168.50.233` (seats) / `172.31.13.23` (host), ports 31313-31315, separate DB; `scripts/run-test-server.sh`; protocol fixtures 11/11 green; accounts `crowps4`+`crowseat` staged (`private/test-server/accounts.env`). Console->`.233` reachability = Task 5 preflight. Prod untouched. |
 | 5 | Plugin-load + private login milestone | pending | |
 | 6 | Online entry, auth, HTTP routing | pending | |
 | 7 | Matching2 bridge | pending | |
@@ -58,3 +58,9 @@ Updated: 2026-10-12 · Plan: `/home/crow/.hermes/plans/2026-10-12_074625-bloodbo
   in memory unless the app exits via the circle-button "exit to XMB" flow — otherwise games see a
   stale save view until a console restart. Fix to apply: clean Apollo exit (or restart) → boot game →
   expect "crow".
+- 2026-10-12 — Task 4 executed: isolated container test instance live (macvlan `192.168.50.233` +
+  bridge `172.31.13.23`; ports 31313-315; own DB). Findings: host-shim only forwards production
+  ports to macvlan containers (alt host ports unreachable from seats); container needed full lib
+  closure + Qt sqldrivers plugin. `tests/test_protocol.py` 11/11 green (also pinned down: STUN
+  vport header, TCP+1 UDP convention, Terminate no-close quirk). Test accounts `crowps4`
+  (console) / `crowseat` (seat) created. Production server and seats untouched.
