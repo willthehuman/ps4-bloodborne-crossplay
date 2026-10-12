@@ -41,3 +41,6 @@ Updated: 2026-10-12 · Plan: `/home/crow/.hermes/plans/2026-10-12_074625-bloodbo
   character); console's older saves identified and left untouched; Apollo v2.3.2 confirmed installed.
   Payload staged (`private/stage/save-transfer/`, patched param.sfo) + method documented in
   `docs/save-transfer.md`. No console writes yet — waiting on the first game launch to create the save.
+- 2026-10-12 — Save transfer, my side complete: uploaded staged save (15 files, sha256-verified) to
+  the console's fake-USB staging path (`/data/fakeusb/PS4/APOLLO/114633a1_CUSA03173_SPRJ0005/`).
+  Blocked on: fresh `CUSA03173` save not yet present (game must reach first autosave + full close).
