@@ -80,11 +80,14 @@
     }
   },
   "console_identity": {
-    "status": "PENDING rediscovery (Task 2)",
-    "firmware_reported_previously": "9.03",
-    "goldhen_version": "unknown",
-    "local_orbis_user_id": "unknown",
-    "installed_title": "unknown — do not assume CUSA03173 from the PC dump"
+    "status": "Captured 2026-10-12 (FTP)",
+    "ip": "192.168.50.90",
+    "ftp": ":2121 (anonymous)",
+    "firmware_reported_previously": "9.03 (not re-verified)",
+    "goldhen_version": "unknown (menu readout pending)",
+    "local_orbis_user_id": "114633a1 (Will's profile) — plugin config key = its decimal form",
+    "installed_title": "CUSA03173 Bloodborne GOTY EU + Patch v1.09 (patch.json + changeinfo verified)",
+    "homebrew": "Apollo Save Tool v2.3.2; plugin loader currently OFF"
   },
   "host": {
     "os": "Omarchy (Linux 7.2.5-3-omarchy)",

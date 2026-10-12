@@ -5,7 +5,7 @@ Updated: 2026-10-12 · Plan: `/home/crow/.hermes/plans/2026-10-12_074625-bloodbo
 | # | Task | State | Notes |
 |---|---|---|---|
 | 1 | Identity freeze / audit | **DONE** | `docs/audit.md`, `docs/compatibility.md`, `docs/build-manifest.json`. Gate A candidate path identified; awaits Will review + 2 open follow-ups. |
-| 2 | Console safety & recovery | **IN PROGRESS** | Console `192.168.50.90` reachable; identity captured (CUSA03173 v1.09 ✓), backups taken (`private/backups/2026-10-12-ps4/`). Remaining: profile confirm, game-launch baseline, egress session — need Will at console/router. |
+| 2 | Console safety & recovery | **IN PROGRESS** | Console `192.168.50.90` reachable; identity captured (CUSA03173 v1.09 ✓; Will's profile = `114633a1`); backups taken. Apollo v2.3.2 installed. Save transfer (PC→PS4) researched + payload staged (`docs/save-transfer.md`). Remaining: game-launch baseline + Apollo import (with Will), egress session. |
 | 3 | Reproduce & fix cross-build | **DONE (local build)** | PRX built clean; import audit: 368 undefined → 139 `sce*` + 191 libc/cxx-rt + 38 C++ mangled, all from the 11 expected PS4 system libs; script validated; CI path bug fixed locally (not pushed). Console load test belongs to Task 5. Artifacts: `private/artifacts/`. |
 | 4 | Isolated backend & identities | pending | after Task 3 basics |
 | 5 | Plugin-load + private login milestone | pending | |
@@ -37,3 +37,7 @@ Updated: 2026-10-12 · Plan: `/home/crow/.hermes/plans/2026-10-12_074625-bloodbo
   `CUSA03173` Bloodborne GOTY with Patch **v1.09** (patch.json + changeinfo); three user profiles;
   GoldHEN `config.ini` (PluginLoader currently OFF), `plugins/` empty, no `plugins.ini`; no save data
   yet. Backups + hashes in `private/backups/2026-10-12-ps4/`. Nothing written to the console.
+- 2026-10-12 — Save transfer prep (Will request): PC live save located (CUSA00207/SPRJ0005, one active
+  character); console's older saves identified and left untouched; Apollo v2.3.2 confirmed installed.
+  Payload staged (`private/stage/save-transfer/`, patched param.sfo) + method documented in
+  `docs/save-transfer.md`. No console writes yet — waiting on the first game launch to create the save.

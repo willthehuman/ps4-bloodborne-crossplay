@@ -9,6 +9,9 @@ Usage:
   ps4-ftp.py get    <remote> <local>
   ps4-ftp.py mirror <remote_dir> <local_dir>
   ps4-ftp.py put    <local> <remote>
+  ps4-ftp.py mkdir  <path>            (creates parents as needed)
+  ps4-ftp.py rename <src> <dst>
+  ps4-ftp.py rm     <remote_file>
 
 Options:
   --host H (default 192.168.50.90)   --port P (default 2121)
@@ -102,6 +105,13 @@ def main():
     p = sub.add_parser("put")
     p.add_argument("local")
     p.add_argument("remote")
+    p = sub.add_parser("mkdir")
+    p.add_argument("path")
+    p = sub.add_parser("rename")
+    p.add_argument("src")
+    p.add_argument("dst")
+    p = sub.add_parser("rm")
+    p.add_argument("remote")
     args = ap.parse_args()
 
     ftp = connect(args.host, args.port)
@@ -117,6 +127,21 @@ def main():
             with open(args.local, "rb") as f:
                 ftp.storbinary(f"STOR {args.remote}", f)
             print(f"uploaded {args.local} -> {args.remote}")
+        elif args.cmd == "mkdir":
+            cur = ""
+            for part in [x for x in args.path.split("/") if x]:
+                cur += "/" + part
+                try:
+                    ftp.mkd(cur)
+                    print("mkd", cur)
+                except ftplib.error_perm as e:
+                    print("exists/skip", cur, "->", e)
+        elif args.cmd == "rename":
+            ftp.rename(args.src, args.dst)
+            print("renamed", args.src, "->", args.dst)
+        elif args.cmd == "rm":
+            ftp.delete(args.remote)
+            print("deleted", args.remote)
     finally:
         try:
             ftp.quit()

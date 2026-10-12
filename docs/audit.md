@@ -50,8 +50,9 @@ Machine-readable copy: `docs/build-manifest.json`.
 - **Title:** `CUSA03173` — Bloodborne GOTY (EU): base package `..._01_Game_Full...`, patch
   `..._02_Patch_v1.09...` staged under `/user/patch/CUSA03173`; update history lists `01.09`.
   **v1.09 confirmed.**
-- **Users:** three local profiles `10000000`, `114633a4`, `114633a1` (nicknames captured privately,
-  not in this repo). **Which one Will plays on: to confirm.**
+- **Users:** three local profiles `10000000`, `114633a4`, `114633a1`. **Will plays on `114633a1`**
+  (confirmed 2026-10-12). Nicknames captured privately, not in this repo.
+- **Homebrew:** Apollo Save Tool v2.3.2 installed (`/user/app/APOL00004`); itemzflow, PS4Xplorer present.
 - **Saves:** no `CUSA03173` save data under any user yet — snapshot immediately after first launch.
 - **GoldHEN:** FTP + BinLoader enabled; **`PluginLoader_Enabled = 0`**; `plugins/` empty, no
   `plugins.ini`; config backed up (`private/backups/2026-10-12-ps4/GoldHEN-config.ini`).
