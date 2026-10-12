@@ -92,3 +92,10 @@ A second, fully isolated shadnet server for development: own container, own IP, 
 - Client convention: STUN UDP port = server TCP port + 1 (nothing advertises it).
 - Terminate replies `NoError` but the server does not close the socket (its queued disconnect errors: "No such method QTcpSocket::disconnectFromHost()"); the client closes; the server releases the session on disconnect.
 - Pre-auth only Login/Create are allowed; anything else answers `Unauthorized (23)`. NPID format `[A-Za-z0-9_-]{3,16}`.
+
+## Console FTP quirk: .prx downloads are de-SELF'd
+
+The GoldHEN FTP server serves `.prx` files that are valid fake-SELFs as their expanded ELF
+(RETR and SIZE report the larger ELF; e.g. 3,175,312 B on disk -> 4,521,856 B download). The
+raw on-disk file is unchanged — verify `.prx` uploads by the **directory-listing size**, not by
+byte-comparing a download. Actual load success is proven via klog (plugin banner + inits).
