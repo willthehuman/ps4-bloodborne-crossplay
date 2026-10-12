@@ -48,6 +48,9 @@ class RunAnalysisTests(unittest.TestCase):
         run = self.analyze_fixture("socket_stub_enters_resolver.log")
         self.assertIn("hook_misroute", run.failures)
         self.assertTrue(run.misroute_confirmed)
+        # raw + raw64 lines of one logical call merge into a single entry
+        self.assertEqual(len(run.resolver_junk), 1)
+        self.assertEqual(run.resolver_junk[0].sock_depth, 1)
 
     def test_socket_result_error_surfaces(self):
         run = self.analyze_fixture("socket_stub_enters_resolver.log")

@@ -221,15 +221,27 @@ def report_from_lines(source: str, lines: list[str]) -> RunReport:
         m = RE_JUNK_RAW64.search(line)
         if m:
             (rdi, rsi, rdx, rcx, r8, r9, rsp, rbp, rip, depth) = m.groups()
-            r.resolver_junk.append(
-                ResolverJunk(
-                    fields={
+            # Merge with the immediately preceding raw entry (same logical call):
+            # the raw64 line follows its raw line and adds full widths + depth.
+            if r.resolver_junk and r.resolver_junk[-1].sock_depth is None:
+                entry = r.resolver_junk[-1]
+                entry.fields.update(
+                    {
                         "rdi": rdi, "rsi": rsi, "rdx": rdx, "rcx": rcx, "r8": r8,
                         "r9": r9, "rsp": rsp, "rbp": rbp, "rip": rip,
-                    },
-                    sock_depth=int(depth),
+                    }
                 )
-            )
+                entry.sock_depth = int(depth)
+            else:
+                r.resolver_junk.append(
+                    ResolverJunk(
+                        fields={
+                            "rdi": rdi, "rsi": rsi, "rdx": rdx, "rcx": rcx, "r8": r8,
+                            "r9": r9, "rsp": rsp, "rbp": rbp, "rip": rip,
+                        },
+                        sock_depth=int(depth),
+                    )
+                )
             continue
         m = RE_JUNK_RAW.search(line)
         if m:
