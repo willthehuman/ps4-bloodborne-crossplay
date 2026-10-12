@@ -1,7 +1,8 @@
 # Runbook — Task 2: console safety gate & recovery
 
-> **Status: DRAFT** — to be executed together with Will and the console present.
-> Nothing in this file has been performed yet. Plan reference: Task 2 + Gate B.
+> **Status: IN PROGRESS** — partial execution 2026-10-12 (read-only captures + backups done; see
+> `docs/status.md`). Remaining steps need Will at the console / a router session.
+> Plan reference: Task 2 + Gate B.
 > Evidence for each step goes to `private/backups/<timestamp>/` and `private/logs/`.
 > No secrets in any tracked file — credentials stay out of this repo entirely.
 

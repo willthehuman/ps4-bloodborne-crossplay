@@ -5,7 +5,7 @@ Updated: 2026-10-12 · Plan: `/home/crow/.hermes/plans/2026-10-12_074625-bloodbo
 | # | Task | State | Notes |
 |---|---|---|---|
 | 1 | Identity freeze / audit | **DONE** | `docs/audit.md`, `docs/compatibility.md`, `docs/build-manifest.json`. Gate A candidate path identified; awaits Will review + 2 open follow-ups. |
-| 2 | Console safety & recovery | **BLOCKED — needs Will + console** | Checklist in `audit.md` §4. |
+| 2 | Console safety & recovery | **IN PROGRESS** | Console `192.168.50.90` reachable; identity captured (CUSA03173 v1.09 ✓), backups taken (`private/backups/2026-10-12-ps4/`). Remaining: profile confirm, game-launch baseline, egress session — need Will at console/router. |
 | 3 | Reproduce & fix cross-build | **DONE (local build)** | PRX built clean; import audit: 368 undefined → 139 `sce*` + 191 libc/cxx-rt + 38 C++ mangled, all from the 11 expected PS4 system libs; script validated; CI path bug fixed locally (not pushed). Console load test belongs to Task 5. Artifacts: `private/artifacts/`. |
 | 4 | Isolated backend & identities | pending | after Task 3 basics |
 | 5 | Plugin-load + private login milestone | pending | |
@@ -33,3 +33,7 @@ Updated: 2026-10-12 · Plan: `/home/crow/.hermes/plans/2026-10-12_074625-bloodbo
   timestamp) — deployed-file hash recorded at push time (`private/artifacts/PROVENANCE.md`).
   CI failures (missing C++ headers on GitHub runners) did NOT reproduce locally; CI release path fixed
   on local branch `local/ci-artifact-path` (not pushed).
+- 2026-10-12 — Task 2 started (console `192.168.50.90` via GoldHEN FTP). Read-only captures: title
+  `CUSA03173` Bloodborne GOTY with Patch **v1.09** (patch.json + changeinfo); three user profiles;
+  GoldHEN `config.ini` (PluginLoader currently OFF), `plugins/` empty, no `plugins.ini`; no save data
+  yet. Backups + hashes in `private/backups/2026-10-12-ps4/`. Nothing written to the console.

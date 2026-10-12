@@ -44,17 +44,22 @@ Machine-readable copy: `docs/build-manifest.json`.
 - Workspace created: `/home/crow/Projects/ps4-bloodborne-crossplay` (`docs/ scripts/ tests/fixtures/ private/ vendor/ toolchains/`).
   `vendor/` and `toolchains/` are git-ignored; identities live in the manifest.
 
-## 4. Console state to (re)establish — input for Task 2
+## 4. Console state — captured 2026-10-12 (FTP, read-only)
 
-Prior notes (firmware 9.03, GoldHEN, FTP :2121) were **not** re-verified today. Task 2 must capture:
-
-1. Firmware + GoldHEN version + plugin-loader mode.
-2. Exact installed Bloodborne title/version (never inferred from the PC dump).
-3. Local Orbis user ID (the decimal key used in `/data/shadnet/config.json` — **not** user `1`).
-4. Save export + a restore rehearsal (the rollback baseline).
-5. `plugins.ini` backup + any existing plugin with the same filename.
-6. Egress policy: router/firewall allowlist for the console's own traffic, including IPv6;
-   keep PSN + update blocks; verify with captures before trying online mode.
+- **Console:** `192.168.50.90`, GoldHEN FTP `:2121` (anonymous), reachable from this host.
+- **Title:** `CUSA03173` — Bloodborne GOTY (EU): base package `..._01_Game_Full...`, patch
+  `..._02_Patch_v1.09...` staged under `/user/patch/CUSA03173`; update history lists `01.09`.
+  **v1.09 confirmed.**
+- **Users:** three local profiles `10000000`, `114633a4`, `114633a1` (nicknames captured privately,
+  not in this repo). **Which one Will plays on: to confirm.**
+- **Saves:** no `CUSA03173` save data under any user yet — snapshot immediately after first launch.
+- **GoldHEN:** FTP + BinLoader enabled; **`PluginLoader_Enabled = 0`**; `plugins/` empty, no
+  `plugins.ini`; config backed up (`private/backups/2026-10-12-ps4/GoldHEN-config.ini`).
+- **Not on console yet:** `/data/shadnet` (plugin deploys it).
+- **Still pending:** firmware readout (console menu), game-launch baseline, egress allowlist session
+  (router; with Will), klog retrieval check for plugin logs (`[KLogServer]` present, `TTYRedirect=0`).
+- Full capture list + hashes: `private/backups/2026-10-12-ps4/` (`SESSION-LOG.md`,
+  `console-files.sha256`).
 
 ## 5. Game import surface (module level)
 
