@@ -44,3 +44,7 @@ Updated: 2026-10-12 · Plan: `/home/crow/.hermes/plans/2026-10-12_074625-bloodbo
 - 2026-10-12 — Save transfer, my side complete: uploaded staged save (15 files, sha256-verified) to
   the console's fake-USB staging path (`/data/fakeusb/PS4/APOLLO/114633a1_CUSA03173_SPRJ0005/`).
   Blocked on: fresh `CUSA03173` save not yet present (game must reach first autosave + full close).
+- 2026-10-12 — Save mystery round: game-side save exists ('Continue' works) but sat in a *pending*
+  state invisible to FTP; after Will's Apollo pass the `CUSA03173` save + meta surfaced on disk
+  (snapshot sha256 `59f4c3e7…`; written by the copy op perms). Next: decrypted export via Apollo →
+  identify contents vs staged payload, then refresh/retry/keystone as needed.
