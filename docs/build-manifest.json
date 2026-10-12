@@ -1,0 +1,79 @@
+{
+  "manifest_version": 1,
+  "generated": "2026-10-12",
+  "generated_by": "Hermes — Task 1 (identity freeze)",
+  "pins": {
+    "plugin": {
+      "repo": "https://github.com/StevenMiller123/shadNet-PS4",
+      "ref": "main",
+      "sha": "9f33b1e86f655cc73cf93f017272ff03f966559c",
+      "extra_branch_read": "failed-attempt-at-fixing-some-issues @ fff22b9085c6f099f0f9bfdc791fa7698be65484"
+    },
+    "plugin_sdk": {
+      "repo": "https://github.com/StevenMiller123/GoldHEN_Plugins_SDK",
+      "sha": "3cf7d13f5441c13939a15e7308bb191f15cc5b0f",
+      "committed": "2026-09-15T01:48:48Z"
+    },
+    "toolchain": {
+      "repo": "https://github.com/StevenMiller123/OpenOrbis-PS4-Toolchain",
+      "release": "release-46e63322a7c9101c9e0c95bff8723a59e2cd7718",
+      "asset": "openorbis_toolchain.tar.gz",
+      "size": 159022440,
+      "sha256": "40bd99bf990f73fbaa494ac84c8354a2dda50fdfdecd0250d99d4a0cb98a3fbb"
+    },
+    "pc_network_source": {
+      "repo": "https://github.com/ayozetr/bloodborne_linux",
+      "tag": "test-issue1-1",
+      "commit": "04fc67d8dc789848aa92baac64a299cac6e30855"
+    },
+    "server_source": {
+      "repo": "https://github.com/Wozzardman/shadnet-p2p",
+      "commit_reviewed": "5a849a192fd4450593c57b10697316ac324c856e"
+    },
+    "server_binary_local": {
+      "path": "/home/crow/shadnet/shadnet",
+      "size": 2117888,
+      "sha256": "8cc32eb2b115e16a967edc02d12463b2183f8c6728b885cb934706b1ba26e5fa",
+      "provenance": "CI build strings reference /home/runner/work/shadnet-p2p; exact run unmatched"
+    },
+    "game_dump": {
+      "path": "/run/media/crow/SteamLib/CUSA03173/EP9000-CUSA03173_00-BLOODBORNE0000EU",
+      "app_ver": "01.09",
+      "title_id": "CUSA03173",
+      "content_id": "EP9000-CUSA03173_00-BLOODBORNE0000EU",
+      "category": "gd",
+      "eboot_bin_size": 93825704,
+      "eboot_bin_sha256": "d65f0b4f01d59166aed16f8604196d8b7dd805abbf0758b356e8f1354c9429f9"
+    }
+  },
+  "vendor_checkouts": {
+    "shadNet-PS4": {
+      "path": "vendor/shadNet-PS4",
+      "head": "9f33b1e86f655cc73cf93f017272ff03f966559c",
+      "submodules": {
+        "externals/abseil-cpp": "e13f664774d9736ea61a226bdab43b85f5b671d2",
+        "externals/fmt": "7bdf0628b1276379886c7f6dda2cef2b3b374f0b",
+        "externals/json": "35705d79d878db5ca1a282ec0f8243a80010d24e",
+        "externals/magic_enum": "591b64351ea8442f8b8fa044ff335d6943e8e6e0",
+        "externals/protobuf": "5917ee224a7e47383a78acc129628511fe210dff"
+      }
+    },
+    "GoldHEN_Plugins_SDK": {
+      "path": "vendor/GoldHEN_Plugins_SDK",
+      "head": "3cf7d13f5441c13939a15e7308bb191f15cc5b0f"
+    }
+  },
+  "console_identity": {
+    "status": "PENDING rediscovery (Task 2)",
+    "firmware_reported_previously": "9.03",
+    "goldhen_version": "unknown",
+    "local_orbis_user_id": "unknown",
+    "installed_title": "unknown — do not assume CUSA03173 from the PC dump"
+  },
+  "host": {
+    "os": "Omarchy (Linux 7.2.5-3-omarchy)",
+    "user": "crow",
+    "lan_ip": "192.168.50.198",
+    "server_endpoint": "192.168.50.239:31313 (control), :31314 (UDP), :31315 (WebAPI)"
+  }
+}
