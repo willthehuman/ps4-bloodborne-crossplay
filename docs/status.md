@@ -64,3 +64,14 @@ Updated: 2026-10-12 · Plan: `/home/crow/.hermes/plans/2026-10-12_074625-bloodbo
   closure + Qt sqldrivers plugin. `tests/test_protocol.py` 11/11 green (also pinned down: STUN
   vport header, TCP+1 UDP convention, Terminate no-close quirk). Test accounts `crowps4`
   (console) / `crowseat` (seat) created. Production server and seats untouched.
+
+---
+
+## Task 5 — round 1 result (2026-10-12): plugin verified on console; crash found + fixed
+
+- Deploy (feature disabled) verified on console; plugin loads, hooks install, and the console
+  **reaches the test server** (`192.168.50.233:31313`, protocol v1). All round-1 goals met.
+- First launch crashed with **CE-34878-0** in `ShadNetClient::IsAuthenticated()`:
+  `IsSignedIn()` used `m_clients[user_id]` (operator[] inserts null shared_ptr) → null-deref
+  at `null+0x223` (verified in disasm + crash dump). Fixed in `np_handler.h` (find+lock+null
+  check; GetNpId by value). Rebuild + redeploy with enabled=true pending.
