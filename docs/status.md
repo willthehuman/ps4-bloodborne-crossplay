@@ -48,3 +48,6 @@ Updated: 2026-10-12 · Plan: `/home/crow/.hermes/plans/2026-10-12_074625-bloodbo
   state invisible to FTP; after Will's Apollo pass the `CUSA03173` save + meta surfaced on disk
   (snapshot sha256 `59f4c3e7…`; written by the copy op perms). Next: decrypted export via Apollo →
   identify contents vs staged payload, then refresh/retry/keystone as needed.
+- 2026-10-12 — Names: PC character = **"crow"** (in userdata0000 + backup0000 only); Will's fresh
+  console character = **"ggg"**. Apollo lists three Bloodborne saves for export: CUSA00900, CUSA03173,
+  CUSA00207 — the export target is **CUSA03173**. Awaiting export to identify on-disk content.
