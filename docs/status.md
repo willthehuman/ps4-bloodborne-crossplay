@@ -75,3 +75,11 @@ Updated: 2026-10-12 · Plan: `/home/crow/.hermes/plans/2026-10-12_074625-bloodbo
   `IsSignedIn()` used `m_clients[user_id]` (operator[] inserts null shared_ptr) → null-deref
   at `null+0x223` (verified in disasm + crash dump). Fixed in `np_handler.h` (find+lock+null
   check; GetNpId by value). Rebuild + redeploy with enabled=true pending.
+
+### Task 5 — COMPLETE (2026-10-12)
+
+Plugin load + private-login milestone verified on the console: clean boot with the plugin,
+`crowps4` signed into shadNet (accountId=17), game reaches the online/offline menu; both
+game-killing crashes found and fixed along the way (null shared_ptr in IsSignedIn; junk
+pointer into the resolver-hook log). Online selection currently falls back offline = expected
+until Tasks 6-8 (matching2/signaling/auth bridge) are built.
