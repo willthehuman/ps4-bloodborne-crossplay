@@ -76,3 +76,16 @@ import into the new one), or fall back to Plan B.
   userdata0000); PC payload has "crow" @0xa060, same layout. Backup:
   `private/backups/2026-10-12-ps4/export-CUSA00207/` (+sha256sums.txt, NOTE.md) — on-disk, gitignored.
 
+
+### PROVEN RECIPE (verified in game, 2026-10-12)
+
+The "Copy save game" (USB -> HDD) route is REJECTED by Bloodborne: the game shows "save data is corrupted"
+even when the copied save carries identical data, the correct keystone (f6d6...), and an account-bearing
+param.sfo. What works is injecting the data into the console's own save:
+
+1. In-game, let the game RECREATE its save (fresh native shell, save id CUSA00207).
+2. Apollo -> HDD Saves -> the save -> "Export save game to Zip" -> HDD (optional snapshot).
+3. Put the source files under `/data/apollo/<userid>/<titleid>_<dirname>/` (e.g. the 11 userdata files).
+4. Apollo -> HDD Saves -> the save -> "Import decrypted save files" -> import each file, then
+   "Apply Changes & Resign".
+5. Exit Apollo via Circle -> boot game -> the transferred character loads.
